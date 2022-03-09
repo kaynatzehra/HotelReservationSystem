@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class HotelReservation  implements HotelReservationIF
 {
+
     ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
     Hotel hotel ;
 
@@ -67,4 +68,5 @@ public class HotelReservation  implements HotelReservationIF
         return cheapestHotel;
 
     }
+
 }
