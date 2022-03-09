@@ -39,7 +39,7 @@ class hotelReservationMainTest
         assertEquals(150, weekendRate);
     }
     @Test
-    public void givenHotelDetails_WhenSizeMatches_ShouldReturnTrue()
+    public void givenHotelDetails_WhenSizeMatches_ShoulReturnTrue()
     {
         HotelReservationIF hotelReservation = new HotelReservation();
         hotelReservation.addHotel("Lakewood", 3, 110,90);
@@ -54,9 +54,21 @@ class hotelReservationMainTest
         HotelReservation hotelReservation = new HotelReservation();
         hotelReservation.addHotel("Lakewood", 3, 110, 90);
         hotelReservation.addHotel("Bridgewood", 4, 160, 50);
-        LocalDate startDate = LocalDate.of(2020, Month.SEPTEMBER, 10);
-        LocalDate endDate = LocalDate.of(2020, Month.SEPTEMBER, 12);
+        LocalDate startDate = LocalDate.of(2021, Month.SEPTEMBER, 10);
+        LocalDate endDate = LocalDate.of(2021, Month.SEPTEMBER, 12);
         String hotelName = hotelReservation.getCheapestHotel(startDate, endDate);
         assertEquals("Lakewood", hotelName);
     }
+    @Test
+    public void givenHotelDetails_shouldReturnBestRatedHotel(){
+
+        HotelReservation hotelReservation = new HotelReservation();
+        hotelReservation.addHotel("Lakewood", 3, 110, 90);
+        hotelReservation.addHotel("Bridgewood", 4, 160, 50);
+        LocalDate startDate = LocalDate.of(2020, Month.SEPTEMBER, 10);
+        LocalDate endDate = LocalDate.of(2020, Month.SEPTEMBER, 12);
+        String hotelName = hotelReservation.getBestRatedHotel(startDate, endDate);
+        assertEquals("Bridgewood", hotelName);
+    }
+
 }
