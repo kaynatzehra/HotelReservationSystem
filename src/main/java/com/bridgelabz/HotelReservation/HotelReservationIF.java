@@ -1,4 +1,5 @@
 package com.bridgelabz.HotelReservation;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -12,4 +13,12 @@ public interface HotelReservationIF
     public String getBestRatedHotel(LocalDate startDate, LocalDate endDate);
 
 }
+
+
+    public interface HotelReservationIF
+    {
+        public void addHotel();
+        public int getHotelListSize();
+        public void printHotelList();
+    }
 

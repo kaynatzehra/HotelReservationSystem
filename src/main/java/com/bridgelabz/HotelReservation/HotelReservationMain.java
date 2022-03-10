@@ -4,6 +4,7 @@ import java.time.Month;
 
 public class HotelReservationMain
 {
+
     public static void main(String[] args)
     {
         HotelReservationIF hotelReservation = new HotelReservation();
@@ -15,5 +16,12 @@ public class HotelReservationMain
         LocalDate endDate = LocalDate.of(2020, Month.SEPTEMBER, 11);
         hotelReservation.getCheapestHotel(startDate, endDate);
         hotelReservation.getBestRatedHotel(startDate, endDate);
+
+    public static void main(String[] args) {
+        System.out.println("Hotel Reservation System");
+        HotelReservationIF hotelReservation = new HotelReservation();
+        hotelReservation.addHotel();
+        hotelReservation.printHotelList();
+
     }
 }
